@@ -5,9 +5,9 @@ An online full-stack movies database website like IMDb and Rotten Tomates that i
 In order to run the website, need to run the server first. In order to run the server, type 'npm start' in terminal.
 
 ### Web Technologies:
-	* **Programming languages:** HTML, CSS, and JavaScript
-	* **Frameworks, libraries and tools:** Bootstrap, JSON, DOM, Node.js, Express.js and Pug.js
-	* **Tools:** Chrome Devtools and Visual Studio code and its apps
+* **Programming languages:** HTML, CSS, and JavaScript
+* **Frameworks, libraries and tools:** Bootstrap, JSON, DOM, Node.js, Express.js and Pug.js
+* **Tools:** Chrome Devtools and Visual Studio code and its apps
 
 ### Existing features:
 	* Responsive Navbar with dynamic links/buttons and dynamic dropdowns
