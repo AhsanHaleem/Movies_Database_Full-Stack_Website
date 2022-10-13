@@ -6,7 +6,7 @@ In order to run the website, need to run the server first. In order to run the s
 
 ### Web Technologies:
 * **Programming languages:** HTML, CSS, and JavaScript
-* **Frameworks, libraries and tools:** Bootstrap, JSON, DOM, Node.js, Express.js and Pug.js
+* **Frameworks and libraries:** Bootstrap, JSON, DOM, Node.js, Express.js and Pug.js
 * **Tools:** Chrome Devtools and Visual Studio code and its apps
 
 ### Existing features:
