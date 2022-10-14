@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="description" content="Movie Database Project" />
+        <meta name="author" content="Ahsan Haleem" />
+
+
+        <!-- CSS Bootstrap file -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <!-- jQuery Bootstrap file -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper.js Bootstrap file -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- JS Bootstrap file -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- My style CSS file -->
+        <link rel="stylesheet" href="/css/style.css" />
+
+        <!-- Icons References -->
+        <!-- <<a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>  // For Profile icon -->
+        <!-- "http://www.w3.org/2000/svg" // For Search icon -->
+
+        <link href="/images/M.png" rel="icon" type="image/x-icon" />
+        <title>Movie Planet</title>
+    </head>
+
+    <body>
+        <header>
+            <!-- Navbar Reference: This code is Bootstrap, i.e. https://getbootstrap.com/. If I change this code, the elements on this website wouldn't work! -->
+            <nav class="navbar navbar-custom navbar-dark navbar-expand-md">
+                <a class="navbar-brand font-weight-bold" href="index.html">
+                    <h2>Movie Planet</h2></a>
+                <button
+                    class="navbar-toggler bg-dark collapsed"
+                    type="button"
+                    data-target="#navbarsExample04"
+                    data-toggle="collapse"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="navbarsExample04"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html"
+                                >Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle nav-light"
+                                id="artists-dropdown"
+                                data-toggle="dropdown"
+                                aria-expanded="false"
+                                aria-haspopup="true">
+                                Artists
+                            </a>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdown04"
+                            >
+                                <a
+                                    class="dropdown-item"
+                                    href="./Artists/directors.html"
+                                    >Directors</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="./Artists/writers.html"
+                                    >Writers</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="./Artists/actors.html"
+                                    >Actors</a
+                                >
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle nav-light"
+                                id="genres-dropdown"
+                                data-toggle="dropdown"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                            >
+                                Genres
+                            </a>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdown04"
+                            >
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Adventure</a>
+                                <a class="dropdown-item" href="#">Animation</a>
+                                <a class="dropdown-item" href="#">Comedy</a>
+                                <a class="dropdown-item" href="#">Crime</a>
+                                <a class="dropdown-item" href="#">Drama</a>
+                                <a class="dropdown-item" href="#">Family</a>
+                                <a class="dropdown-item" href="#">Fantasy</a>
+                                <a class="dropdown-item" href="#">Horror</a>
+                                <a class="dropdown-item" href="#">Romance</a>
+                                <a class="dropdown-item" href="#">Sci-Fi</a>
+                                <a class="dropdown-item" href="#">Thriller</a>
+                                <a class="dropdown-item" href="#">Western</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-md-0">
+                        <div class="search-form">
+                            <input
+                                type="text"
+                                class="search-input"
+                                placeholder="Search"
+                            />
+                            <a href="#" class="search-btn">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="mx-3"
+                                    role="img"
+                                    viewBox="0 0 24 24"
+                                    focusable="false"
+                                >
+                                    <title>Search</title>
+                                    <circle cx="10.5" cy="10.5" r="7.5" />
+                                    <path d="M21 21l-5.2-5.2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </form>
+                    <a
+                        class="btn btn-md btn-outline-primary btn-profile"
+                        href="./user_profile.html"
+                        >Profile</a
+                    >
+                    <a 
+                        id="btnSign-in"
+                        class="btn btn-md btn-outline-primary btn-profile"
+                        data-toggle="modal"
+                        data-target="#regModal"
+                        >Sign In</a
+                    >
+                    <a
+                        id="btnSign-up"
+                        class="btn btn-md btn-outline-primary btn-profile"
+                        data-toggle="modal"
+                        data-target="#signUpModal"
+                        >Sign Up</a
+                    >
+
+                    <!-- Profile Dropdown (not working) -->
+                    <a
+                        class="nav-link dropdown-toggle nav-light"
+                        id="profile-dropdown"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
+                        <svg
+                            class="profile-logo"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 1000 1000"
+                            enable-background="new 0 0 1000 1000"
+                            xml:space="preserve"
+                        >
+                            <metadata>
+                                Svg Vector Icons :
+                                http://www.onlinewebfonts.com/icon
+                            </metadata>
+                            <g>
+                                <path
+                                    d="M990,500c0-270.6-219.4-490-490-490C229.4,10,10,229.4,10,500c0,270.6,219.4,490,490,490c110.8,0,213-38.3,294-100.1c4.3-4.3,6.4-8.5,6.4-14.9c0-12.8-10.7-21.3-21.3-21.3c-6.4,0-12.8,2.1-14.9,6.4l0,0c-74.6,53.3-164,87.3-262,87.3C255,947.4,56.9,749.3,56.9,504.3C56.9,259.3,255,59,500,59c245,0,443.1,198.1,443.1,443.1c0,74.6-17,144.9-51.1,206.7l0,0c0,2.1-2.1,4.3-2.1,6.4c0,12.8,10.7,21.3,21.3,21.3c8.5,0,17-6.4,19.2-14.9l0,0C968.7,657.7,990,581,990,500L990,500z"
+                                />
+                                <path
+                                    d="M721.6,715.2L721.6,715.2C721.6,713,721.6,713,721.6,715.2c0-2.1,0-2.1-2.1-4.3c-23.4-66-66-112.9-132.1-138.5c51.1-29.8,85.2-85.2,85.2-149.1c0-95.9-76.7-172.6-172.6-172.6c-95.9,0-172.6,76.7-172.6,172.6c0,63.9,34.1,119.3,85.2,149.1C348.7,598,304,649.1,282.7,713c0,0,0,0,0,2.1c0,2.1,0,2.1-2.1,2.1l0,0v2.1c0,10.7,8.5,17,17,17c8.5,0,14.9-4.3,17-10.7C344.5,651.3,416.9,598,502.1,598c85.2,0,159.8,55.4,187.5,130l0,0c0,0,0,0,0,2.1l0,0c2.1,6.4,8.5,8.5,14.9,8.5c10.7,0,17-8.5,17-17C721.6,717.3,721.6,715.2,721.6,715.2L721.6,715.2z M367.9,423.3c0-72.4,59.7-132.1,132.1-132.1s132.1,59.7,132.1,132.1S572.4,555.4,500,555.4C427.6,553.3,367.9,495.7,367.9,423.3L367.9,423.3z"
+                                />
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item">Profile</a>
+                        <a class="dropdown-item">Sign In/Register</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sign in modal (pop-up form for sign in): This code is Bootstrap, i.e. https://getbootstrap.com/  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="modal fade" id="regModal">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <form class="reg-form">
+                                    <img
+                                        class="mplogo"
+                                        src="/images/M.png"
+                                        alt="Movie Planet Logo"
+                                    />
+                                    <h3 class="font-weight-normal h3 mb-3">
+                                        Sign In
+                                    </h3>
+                                    <label class="sr-only" for="inputUsername"
+                                        >Username</label
+                                    >
+                                    <input
+                                        id="usernameInput"
+                                        class="form-control"
+                                        type="username"
+                                        placeholder="Username"
+                                        required
+                                        autofocus
+                                    />
+                                    <label class="sr-only" for="inputPassword"
+                                        >Password</label
+                                    >
+                                    <input
+                                        id="passwordInput"
+                                        class="form-control"
+                                        type="password"
+                                        placeholder="Password"
+                                        required
+                                    />
+                                    <div class="mb-3 check">
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                value="remember-me"
+                                            />
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <button
+                                        class="btn btn-md btn-block btn-primary"
+                                        type="submit"
+                                    >
+                                        Sign in
+                                    </button>
+                                    <button
+                                        class="btn btn-md btn-block btn-primary"
+                                        data-dismiss="modal"
+                                        value="Close"
+                                    >
+                                        Close
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign up modal (pop-up form for sign in): This code is Bootstrap, i.e. https://getbootstrap.com/  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="modal fade" id="signUpModal">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <form class="reg-form">
+                                    <img
+                                        class="mplogo"
+                                        src="/images/M.png"
+                                        alt="Movie Planet Logo"
+                                    />
+                                    <h3 class="font-weight-normal h3 mb-3">
+                                        Sign Up
+                                    </h3>
+                                    <label class="sr-only" for="inputUsername"
+                                        >Username</label
+                                    >
+                                    <input
+                                        id="usernameSignUp"
+                                        class="form-control"
+                                        type="username"
+                                        placeholder="Username"
+                                        required
+                                        autofocus
+                                    />
+                                    <label class="sr-only" for="inputPassword"
+                                        >Password</label
+                                    >
+                                    <input
+                                        id="passwordSignUp"
+                                        class="form-control"
+                                        type="password"
+                                        placeholder="Password"
+                                        required
+                                    />
+                                    <div class="mb-3 check">
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                value="remember-me"
+                                            />
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <button
+                                        class="btn btn-md btn-block btn-primary"
+                                        type="submit"
+                                    >
+                                        Sign up
+                                    </button>
+                                    <button
+                                        class="btn btn-md btn-block btn-primary"
+                                        data-dismiss="modal"
+                                        value="Close"
+                                    >
+                                        Close
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main id="main-role">
+            <div class="container">
+                <!-- <div class="row"> -->
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <h1>.</h1>
+                <!-- </div> -->
+            </div>
+        </main>
+
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <div class="row foot-row-one">
+                    <div class="col-md-2 col-sm-4 col-xs-12 foot-col">
+                        <a class="footer-link" href="./index.html">Home</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 foot-col">
+                        <a
+                            class="footer-link"
+                            data-toggle="modal"
+                            data-target="#signUpModal"
+                            >Sign-up</a
+                        >
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 foot-col">
+                        <a class="footer-link" href="#">Terms of Use</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 foot-col">
+                        <a class="footer-link" href="#">Privacy Policy</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 foot-col">
+                        <a class="footer-link" href="#">Help Center</a>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-12 foot-col">
+                        <a class="footer-link" href="#">Feedback</a>
+                    </div>
+                </div>
+                <div class="row foot-row-two">
+                    <div class="col-12 foot-col-two">
+                        <p>©2020, MoviePlanet.com,Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- My script JS file -->
+        <script src="/js/script.js"></script>
+
+        <!-- For Sign-in pop-up  -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $('#signUpModal').modal('show');
+                }, 2000);
+            });
+        </script>
+    </body>
+</html>
