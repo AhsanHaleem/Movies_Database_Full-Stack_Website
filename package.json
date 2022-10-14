@@ -1,0 +1,16 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Contributor Name: Ahsan Haleem\r Contributor Student Number: 101011397",
+  "main": "client.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
