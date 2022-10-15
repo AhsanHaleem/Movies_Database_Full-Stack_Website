@@ -1,0 +1,153 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: black;
+    margin-bottom: 180px;
+}
+
+main {
+    background-image: url('../images/Netflix_3.jpg');
+}
+
+/* --------------- Custom Navbar ----------- */
+
+.navbar-custom {
+    background-color: rgb(15, 15, 15);
+    /* margin-bottom: 20px; */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: whitesmoke;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: whitesmoke;
+}
+
+.navbar-custom .navbar-toggler {
+    color: whitesmoke;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    background-color: rgb(218, 218, 218);
+}
+
+/* -------------- Search Form ------------- */
+
+.search-form {
+    height: 40px;
+    background: #191c22;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 10px;
+}
+
+.search-input {
+    width: 0px;
+    float: left;
+    border: none;
+    outline: none;
+    color: white;
+    background: none;
+    transition: 0.4s;
+    font-size: 16px;
+    line-height: 40px;
+    margin-top: -10px;
+}
+
+.search-form:hover > .search-input {
+    padding: 0 6px;
+    width: 150px;
+}
+
+.search-btn {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------- Profile Button ------------- */
+
+.btn-profile {
+    margin-right: 10px;
+}
+
+.profile-logo {
+    height: 40px;
+    width: 40px;
+    fill: #0057da;
+}
+
+/* ----------- Registration Modal ----------- */
+
+.reg-form {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    max-width: 330px;
+}
+
+.reg-form .form-control {
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.reg-form .form-control:focus {
+    z-index: 2;
+}
+
+.reg-form .mplogo {
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.reg-form .check {
+    font-weight: 400;
+}
+
+.reg-form input[type='username'] {
+    margin-bottom: -1px;
+}
+
+.reg-form input[type='password'] {
+    margin-bottom: 10px;
+}
+
+/* ----------- Footer ----------- */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    margin-bottom: 80px;
+}
+
+.foot-row-one {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.footer-link {
+    color: #ffffff;
+}
+
+.foot-row-two {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
