@@ -2,7 +2,9 @@
 An online full-stack movies database website like IMDb and Rotten Tomates that includes information regarding films' plot summaries, ratings, critical and fans reviews, cast, production crew. Moreover, it also displays the information regarding directiors, writers and actors in the film industry.
 
 ### Running the website
-In order to run the website, need to run the server first. In order to run the server, type 'npm start' in terminal.
+In order to run the website, you need node_modules and you need to run the server first. 
+In order to run the server, type 'npm start' in terminal.
+And then open the http://localhost:3000/
 
 ### Web Technologies:
 * **Programming languages:** HTML, CSS, and JavaScript
