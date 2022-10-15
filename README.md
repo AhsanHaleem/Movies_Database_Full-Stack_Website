@@ -1,7 +1,7 @@
 # Movies Database Full-Stack Website, "Movie Planet"
 An online full-stack movies database website like IMDb and Rotten Tomates that includes information regarding films' plot summaries, ratings, critical and fans reviews, cast, production crew. Moreover, it also displays the information regarding directiors, writers and actors in the film industry.
 
-**Still in progress, not completed and so far it looks like this... **
+**Still in progress, not completed and so far it looks like this...**
 ![image](https://user-images.githubusercontent.com/29932763/196005080-60f8b522-0a1a-495c-8f98-081531027256.png)
 
 
