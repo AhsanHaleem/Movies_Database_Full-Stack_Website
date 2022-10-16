@@ -1,0 +1,73 @@
+Movie Data structures Outline
+
+Each of these is storing the data in an object (could use arrays instead but there are performance differences between the two). Objects can be used for easy lookup given an ID. Arrays can use array.filter to do a lot in one line. 
+One object for users, one for movies, one for people, one for reviews. Eventually, all of this data will be moved to a database.
+
+Users object structure:
+{
+  "user0":
+    {
+        "id": 1000001,
+        "username": "Connor",
+        "password": "Connor1958Benny",
+        "userSigned": false (true-signed up user, false-not signed up user), 
+        "userLogged": false (true-logged in user, false-not logged in user), 
+        "userType": false (true-contributing user, false-regular user),
+        "followers": [1000001, 1000004, 1000128, 1000243],
+        "followingUsers":  [1000001, 1000004, 1000128, 1000243],
+        "followingPeople": [1000001, 1000005, 1000006, 1000007] (numbers are peopleID),
+        "reviews": [1000023, 1000534, 1000012] (numbers are reviewID),
+        "recommendedMovies": [1000005, 1008790, 1000257], (stores maximum of 10 moviesID)
+    },
+  ...etc...
+}
+
+Movies Object Structure:
+{
+  "movies0":
+    {
+      "title": "Toy Story",
+        "releaseYear": 1995,
+        "rated": "G",
+        "releaseDate": "22 Nov 1995",
+        "runtime": 81,
+        "genre": ["animation", "adventure", "comedy", "family", "fantasy"],
+        "director": 1000059,
+        "writers": [1000005, 1000016, 1000212, 1000061],
+        "actors": [1000001, 1000007, 1000008, 1000012],
+        "averageRating": 6.7,
+        "noOfRatings":23,736,
+        "metascore": "46",
+        "plot": "John and Max resolve to save their beloved bait shop from turning into an Italian restaurant, just as its new female owner catches Max's attention.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjQxM2YyNjMtZjUxYy00OGYyLTg0MmQtNGE2YzNjYmUyZTY1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+        "reviews": [1000124, 1000534, 1000012] (reviewID)
+    },
+  ...etc...
+}
+
+People Object Structure:
+{
+  "people0":
+    {
+       "name": Stanley Kubrick,
+        "role":{
+        "actor": true,
+        "director": false,
+        "writer": true
+        },
+        "workedInMovie": [1000004, 1000572, 1000023] (movieID)
+    },
+  ...etc...
+}
+
+Reviews Object Structure 
+{
+  review0:
+  {
+        "userID": "1000001",
+        "movieID": 1000002",
+        "rating": "8",
+        "brief summary": "....."
+        "content": "....."
+  }
+}
